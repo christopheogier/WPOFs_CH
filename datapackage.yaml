@@ -1,0 +1,160 @@
+name: WPOF_CH
+version: 0.1.0
+created: '2024-03-19T12:16:45Z'
+title: Water pocket outurst floods in Swizerland database
+profile: tabular-data-package
+description: Metedata for the reported water pocket outburst floods (WPOFs) from Swiss glaciers.
+languages:
+  - en
+licenses:
+  - title: Creative Commons Attribution 4.0 International
+    name: CC-BY-4.0
+    path: https://creativecommons.org/licenses/by/4.0
+contributors:
+  - title: Christophe Ogier
+    path: https://orcid.org/0000-0002-5526-6071
+    organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
+    email: ogier@vaw.baug.ethz.ch
+    role: author | wrangler
+  - title: Mauro Fischer
+    path: https://orcid.org/0000-0002-0950-776X
+    organization: Institute of Geography, University of Bern, Switzerland
+    role: author | wrangler
+  - title: Mylène Jacquemart
+    path: https://orcid.org/0000-0003-2501-7645
+    organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
+    email: jacquemart@vaw.baug.ethz.ch
+    role: author | wrangler
+
+resources:
+  - name: source
+    description: Data sources considered in the compilation of this database.
+    path: data/source.csv
+    format: csv
+    dialect:
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: id
+          description: Unique identifier.
+          type: integer
+
+        - name: sgi_ID
+          description: id of the glaciers according to the Swiss Glacier Inventory 2016 (Linsbauer et al., 2021).
+          type: string
+
+        - name: Major_RGI_Region
+          description: Region described in the Randolph Glaacier Inventory.
+          type: string
+
+        - name: Mountain_range_Region
+          description: Mountain range within the RGI region.
+          type: string
+
+        - name: Country
+          description: Country.
+          type: string
+
+        - name: Glacier
+          description: Name of the glacier.
+          type: string
+
+        - name: Lake_type
+          description: Type of the water reservoir.
+          type: string     
+
+	- name: Hazard
+          description: Type of flood.
+          type: string
+
+	- name: Outburst_mechanism
+          description: mechanism of flood.
+          type: string
+
+	- name: X
+          description: X coordinates in the LV95 system 8swiss coordinates).
+          type: string
+
+	- name: Y
+          description: Y coordinates in the LV95 system 8swiss coordinates).
+          type: string
+
+	- name: River
+          description: immediate river downstream the glacier, where the flood occured.
+          type: string
+
+	- name: Date_Min
+          description: minimum date of the event.
+          type: date (YYYY-MM-DD)
+
+	- name: Date_Max
+          description: maximum date of the event, that is equals to Date_Min when the day of the event is known.
+          type: date (YYYY-MM-DD)
+
+	- name: Cavity_Volume_VL[m3]
+          description: Mean volume of the cavity in cubic meter. The cell is empty if this is unknown.
+          type: float
+
+        - name: Min_VL
+          description: Minimum volume of the cavity in cubic meter. The cell is empty if this is unknown.
+          type: float
+
+         - name: Max_VL
+          description: Maximum volume of the cavity in cubic meter. The cell is empty if this is unknown.
+          type: float
+
+         - name: VL_calculation
+          description: Method to calculate the cavity volume. The cell is empty if this is unknown.
+          type: string
+
+        - name: Flood_Volume_V0[m3]
+          description: Mean volume of the flood in cubic meter. The cell is empty if this is unknown.
+          type: float
+
+        - name: Min_V0
+          description: Minimum volume of the flood in cubic meter. The cell is empty if this is unknown.
+          type: float
+
+        - name: Max_V0
+          description: Maximum volume of the flood in cubic meter. The cell is empty if this is unknown.
+          type: float
+
+         - name: V0_calculation
+          description: Method to calculate the flood volume. The cell is empty if this is unknown.
+          type: string
+
+        - name: Peak_discharge_Qp[m3/s]
+          description: Maximal peak discharge of the flood in cubic meter per second. The cell is empty if this is unknown.
+          type: float
+
+        - name: Qp_calculation
+          description: Method to calculate the maximal peak discharge of the flood. The cell is empty if this is unknown.
+          type: string
+
+         - name: Impacts
+          description: Brief description of the impact of the flood on infrastructure and people. The cell is empty if this is unknown.
+          type: string
+
+         - name: Observation
+          description: Complementary descriptions of the event. The cell is empty if this is unknown.
+          type: string
+
+         - name: First_reference_found
+          description: Year of the first reference found for the event. The cell is empty if this is unknown.
+          type: Year (YYYY)
+
+         - name: Reference
+          description: Reference of the event. The cell is empty if this is unknown.
+          type: string
+
+
+
+
+
+
+  
