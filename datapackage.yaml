@@ -77,11 +77,11 @@ resources:
           type: string
 
 	- name: X
-          description: X coordinates in the LV95 system 8swiss coordinates).
+          description: X coordinates in the LV95 system (swiss coordinates).
           type: string
 
 	- name: Y
-          description: Y coordinates in the LV95 system 8swiss coordinates).
+          description: Y coordinates in the LV95 system (swiss coordinates).
           type: string
 
 	- name: River
