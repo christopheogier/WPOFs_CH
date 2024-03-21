@@ -73,7 +73,7 @@ resources:
           type: string
 
 	- name: Outburst_mechanism
-          description: mechanism of flood.
+          description: mechanisms of flood suggested (see also Ogier et al., "Definition, formation and rupture mechanisms of water pocket outburst floods in alpine glaciers: insights from an updated inventory for the Swiss Alps", in preparation.
           type: string
 
 	- name: X
@@ -85,7 +85,7 @@ resources:
           type: string
 
 	- name: River
-          description: immediate river downstream the glacier, where the flood occured.
+          description: river downstream the glacier, where the flood occured.
           type: string
 
 	- name: Date_Min
@@ -93,7 +93,7 @@ resources:
           type: date (YYYY-MM-DD)
 
 	- name: Date_Max
-          description: maximum date of the event, that is equals to Date_Min when the day of the event is known.
+          description: maximum date of the event, that is equals to Date_Min when the exact day of the event is known.
           type: date (YYYY-MM-DD)
 
 	- name: Cavity_Volume_VL[m3]
