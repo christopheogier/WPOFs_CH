@@ -27,9 +27,6 @@ contributors:
     role: author | wrangler
 
 resources:
-  - name: source
-    description: Data sources considered in the compilation of this database.
-    path: data/source.csv
     format: csv
     dialect:
       header: true
